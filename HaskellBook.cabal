@@ -1,0 +1,58 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.33.0.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: 6b47fff5d2d8bed16d55844c625ba2c7b9c2ecc116a06e5a4f98525098824d51
+
+name:           HaskellBook
+version:        0.1.0.0
+homepage:       https://github.com/arthurborisow/HaskellBook#readme
+bug-reports:    https://github.com/arthurborisow/HaskellBook/issues
+author:         Arthur Borisow
+maintainer:     Arthur Borisow
+copyright:      2020 Arthur Borisow
+license:        BSD3
+build-type:     Simple
+
+source-repository head
+  type: git
+  location: https://github.com/arthurborisow/HaskellBook
+
+library
+  exposed-modules:
+      Lib
+  other-modules:
+      Paths_HaskellBook
+  hs-source-dirs:
+      src
+  ghc-options: -Wall
+  build-depends:
+      base >=4.7 && <5
+  default-language: Haskell2010
+
+executable HaskellBook-exe
+  main-is: Main.hs
+  other-modules:
+      Paths_HaskellBook
+  hs-source-dirs:
+      app
+  ghc-options: -Wall -Wincomplete-uni-patterns -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      HaskellBook
+    , base >=4.7 && <5
+  default-language: Haskell2010
+
+test-suite HaskellBook-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  other-modules:
+      Paths_HaskellBook
+  hs-source-dirs:
+      test
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      HaskellBook
+    , base >=4.7 && <5
+  default-language: Haskell2010

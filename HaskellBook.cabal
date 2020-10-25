@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 74a18f3c90aa975129b5ea1627a23f145d0b8077394c8d90e42e69bab519f2b1
+-- hash: df0bbc561c9e3e8f927b451dcff788e89e563490ef48b9f3038f58e2938c03eb
 
 name:           HaskellBook
 version:        0.1.0.0
@@ -24,6 +24,12 @@ library
   exposed-modules:
       Chapter3
       Chapter4
+      Chapter5
+      Chapter6
+      Chapter7
+      Chapter8
+      Chapter9
+      Chapter9.PoemLines
       Lib
       Reverse
   other-modules:

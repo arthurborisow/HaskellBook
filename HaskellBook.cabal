@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: df0bbc561c9e3e8f927b451dcff788e89e563490ef48b9f3038f58e2938c03eb
+-- hash: abe3240d8898351d4023162ed997c75fa3765aac51eefd2642726efd395f3752
 
 name:           HaskellBook
 version:        0.1.0.0
@@ -22,6 +22,7 @@ source-repository head
 
 library
   exposed-modules:
+      Chapter10
       Chapter3
       Chapter4
       Chapter5
@@ -30,6 +31,7 @@ library
       Chapter8
       Chapter9
       Chapter9.PoemLines
+      Cipher
       Lib
       Reverse
   other-modules:
@@ -39,6 +41,7 @@ library
   ghc-options: -Wall
   build-depends:
       base >=4.7 && <5
+    , time
   default-language: Haskell2010
 
 executable HaskellBook-exe

@@ -12,6 +12,8 @@ library:
   source-dirs: src
   ghc-options:
     - -Wall
+  dependencies:
+    - time
 executables:
   HaskellBook-exe:
     main:                Main.hs

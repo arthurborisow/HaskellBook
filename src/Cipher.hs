@@ -1,6 +1,7 @@
 module Cipher where
 
 import Data.Char
+import Test.QuickCheck
 
 startPos :: Int
 startPos = ord 'a'
@@ -46,3 +47,22 @@ substituteString _ [] = []
 substituteString s@(x:xs) (y:ys)
   | isAlpha y = x : substituteString xs ys
   | otherwise = y : substituteString s ys
+
+genSecret :: Gen [Char]
+genSecret =
+  sized $
+    \n -> do
+      k <- choose (1, n)
+      sequence [ arbitrary | _ <- [1..k] ]
+
+prop_caesar :: Int -> ASCIIString -> Bool
+prop_caesar n (ASCIIString x) = unCaesar n (caesar n x) == x
+
+prop_vigenere :: ASCIIString -> Property
+prop_vigenere (ASCIIString x) = forAll genSecret (\s -> unVigenere (Secret s) (vigenere (Secret s) x) == x)
+
+checkCaesar :: IO ()
+checkCaesar = quickCheck prop_caesar
+
+checkVigenere :: IO ()
+checkVigenere = quickCheck prop_vigenere

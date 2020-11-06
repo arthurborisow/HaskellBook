@@ -15,6 +15,7 @@ library:
   dependencies:
     - time
     - QuickCheck
+    - checkers
 executables:
   HaskellBook-exe:
     main:                Main.hs

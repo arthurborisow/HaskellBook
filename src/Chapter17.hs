@@ -184,7 +184,7 @@ combos = liftA3 (,,)
 main :: IO ()
 main = do
   quickBatch (applicative (undefined :: List (String, Double, Int)))
---  quickBatch (applicative (undefined :: ZipList' (String, Double, Int)))
+  quickBatch (applicative (undefined :: ZipList' (String, Double, Int)))
   quickBatch (applicative (undefined :: Validation [String] (String, String, Int)))
   quickBatch (applicative (undefined :: Pair (String, Double, Int)))
   quickBatch (applicative (undefined :: Two String (String, Double, Int)))

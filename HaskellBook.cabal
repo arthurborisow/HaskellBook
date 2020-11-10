@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 1e91d931271241f10527215833799c4ce23875cf52db59ecf81a73ab5d9400fc
+-- hash: 9033beb150a181cfff7c71e4964819281dfe46f68cb594ee1be0a4ec963b2144
 
 name:           HaskellBook
 version:        0.1.0.0
@@ -36,6 +36,7 @@ library
       Chapter20
       Chapter21
       Chapter22
+      Chapter23
       Chapter3
       Chapter4
       Chapter5
@@ -56,7 +57,9 @@ library
       QuickCheck
     , base >=4.7 && <5
     , checkers
+    , random
     , time
+    , transformers
   default-language: Haskell2010
 
 executable HaskellBook-exe

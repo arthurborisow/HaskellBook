@@ -16,6 +16,8 @@ library:
     - time
     - QuickCheck
     - checkers
+    - random
+    - transformers
 executables:
   HaskellBook-exe:
     main:                Main.hs

@@ -18,6 +18,7 @@ library:
     - checkers
     - random
     - transformers
+    - trifecta
 executables:
   HaskellBook-exe:
     main:                Main.hs

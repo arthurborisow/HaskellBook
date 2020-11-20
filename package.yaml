@@ -19,6 +19,9 @@ library:
     - random
     - transformers
     - trifecta
+    - scotty
+    - containers
+    - text
 executables:
   HaskellBook-exe:
     main:                Main.hs
